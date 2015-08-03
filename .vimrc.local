@@ -71,3 +71,6 @@ if filereadable(glob("~/symvimny/.vimrc"))
   source ~/symvimny/.vimrc
 endif
 
+" XXX fix Mac backspace
+set backspace=2
+:fixdel
