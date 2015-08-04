@@ -1,0 +1,92 @@
+"
+" vim configuration by Emiliano 'AlberT' Gabrielli <emiliano.gabrielli@gmail.com>
+" feel free to use
+" Expecially intended for PHP and Symfony coding
+"
+
+set nocompatible
+" enable pathogen plugin manager
+" execute pathogen#infect()   
+call pathogen#infect()
+filetype plugin indent on
+syntax on
+
+" Highlight current line in insert mode.
+autocmd InsertLeave * se nocul
+autocmd InsertEnter * se cul
+
+" Enable modeline
+set modeline
+set modelines=5
+
+" {{{  Settings
+
+" Use filetype plugins, e.g. for PHP
+filetype plugin indent on
+
+syntax on
+
+" Show nice info in ruler
+set ruler
+set laststatus=2
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=0
+set noexpandtab
+
+" Show line numbers by default
+set nonumber
+set norelativenumber
+
+" Enable folding by fold markers
+set foldmethod=marker
+
+" Autoclose folds, when moving out of them
+set foldclose=all
+
+" Use incremental searching
+set incsearch
+
+" Do not highlight search results
+set nohlsearch
+
+set ff=unix ffs=unix
+
+" XXX fix Mac backspace
+if has("unix")
+	let s:uname = system("uname -s")
+    if s:uname == "Darwin\n"
+    " Do Mac stuff here
+		set backspace=2
+		:fixdel
+	endif
+endif
+
+" }}} 
+
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+" {{{ .phps files handled like .php
+
+au BufRead,BufNewFile *.phps set filetype=php
+
+" }}} 
+
+
+" {{{ FIXME Reads the skeleton php file
+" it doen't work if moved into the ftplugin file
+
+" Note: The normal command afterwards deletes an ugly pending line and moves
+" the cursor to the middle of the file.
+autocmd BufNewFile *.php 0r ~/.vim/php/skeleton.php
+
+" }}}
+
+" {{{  Symfony settings
+
+if filereadable(glob("~/.vim/symvimny/symfony.vim"))
+  source ~/.vim/symvimny/symfony.vim
+endif
+
+" }}}
