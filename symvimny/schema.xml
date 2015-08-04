@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="propel">
+  <table name="table" IdMethod="native">
+    <column name="id" type="INTEGER" required="true" autoIncrement="true" primaryKey="true"/>
+    <column name="description" type="VARCHAR" size="255" required="true" default=""/>
+    <column name="tickbox" type="boolean" default="false" />
+  </table>
+</database>

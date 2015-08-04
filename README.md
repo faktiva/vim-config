@@ -6,7 +6,7 @@ Just clone the repo into your home .vim directory and insert the following to `.
 
 ```
 " Source local settings
-if filereadable(glob("~/.vim/.vimrc.local"))
-    source ~/.vim/.vimrc.local
+if filereadable(glob("~/.vim/vimrc.local"))
+    source ~/.vim/vimrc.local
 endif
 ```
