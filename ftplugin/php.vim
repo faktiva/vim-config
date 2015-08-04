@@ -31,3 +31,7 @@ set incsearch
 
  " }}}  
 
+let g:php_cs_fixer_level = "psr2"           " which level ?
+let g:php_cs_fixer_config = "default"       " configuration
+let g:php_cs_fixer_verbose = 1              " Return the output of command if 1, else an inline information.
+
