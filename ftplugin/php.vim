@@ -5,7 +5,8 @@
 " Intended for PHP and Symfony coding
 "
 
-"  {{{  Settings 
+
+" {{{  Settings
 
 " Use filetype plugins, e.g. for PHP
 filetype plugin on
@@ -29,9 +30,12 @@ set norelativenumber
 " Use incremental searching
 set incsearch
 
- " }}}  
+" }}}
+
+" {{{ php_cs_fixer
 
 let g:php_cs_fixer_level = "psr2"           " which level ?
 let g:php_cs_fixer_config = "default"       " configuration
 let g:php_cs_fixer_verbose = 1              " Return the output of command if 1, else an inline information.
 
+" }}}
