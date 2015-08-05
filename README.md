@@ -10,3 +10,5 @@ if filereadable(glob("~/.vim/vimrc.local"))
     source ~/.vim/vimrc.local
 endif
 ```
+
+Then checkout the submodules in bundles/ running `git submodule update --init`
