@@ -6,7 +6,7 @@
 
 set nocompatible
 " enable pathogen plugin manager
-" execute pathogen#infect()   
+" execute pathogen#infect()
 call pathogen#infect()
 filetype plugin indent on
 syntax on
@@ -22,18 +22,22 @@ set modelines=5
 " {{{  Settings
 
 if &diff
-	"diff mode
+    "diff mode
     set diffopt+=iwhite
 endif
 
-" Show nice info in ruler
-set ruler
+colorscheme default
+set background=dark
+set ruler                       " show line and column information
 set laststatus=2
 
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0
 set noexpandtab
+
+set ignorecase                  " caseinsensitive searches
+set showmode                    " always show command or insert mode
 
 " Show line numbers by default
 set nonumber
@@ -55,11 +59,11 @@ set ff=unix ffs=unix
 
 " XXX fix Mac backspace
 if has("unix")
-	let s:uname = system("uname -s")
-    if s:uname == "Darwin\n"
-		set backspace=2
-		:fixdel
-	endif
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin\n"
+    set backspace=2
+    :fixdel
+  endif
 endif
 
 " }}} 
@@ -71,7 +75,6 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 au BufRead,BufNewFile *.phps set filetype=php
 
 " }}} 
-
 
 " {{{ FIXME Reads the skeleton php file
 " it doen't work if moved into the ftplugin file
