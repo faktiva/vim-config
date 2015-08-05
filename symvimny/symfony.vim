@@ -1,15 +1,6 @@
 " Automatically reload .vimrc when changing
 autocmd! bufwritepost .vimrc source %
 
-colorscheme default
-set background=dark
-
-" use spaces rather then tabs, with a width of 2
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-
 " this will show tabs and trailing spaces
 set list
 set listchars=tab:>-,trail:-
@@ -24,9 +15,6 @@ set textwidth=0
 
 " Do not wrap lines automatically
 set nowrap
-
-" Show line numbers by default
-set number
 
 function! InsertTabWrapper()
     let col = col('.') - 1
@@ -46,9 +34,6 @@ set complete-=k complete+=k
 " Remap the tab key to select action with InsertTabWrapper
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
-set ignorecase                  " caseinsensitive searches-
-set showmode                    " always show command or insert mode-
-set ruler                       " show line and column information-
 set showmatch                   " show matching brackets
 set formatoptions=tcqor
 set whichwrap=b,s,<,>,[,]       " cursors will now wrap
