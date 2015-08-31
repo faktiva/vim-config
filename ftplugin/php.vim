@@ -16,10 +16,11 @@ set ruler
 set laststatus=2
 
 set tabstop=4
-set shiftwidth=4
-set softtabstop=0
+set expandtab
 
-set noexpandtab
+set shiftwidth=4
+set softtabstop=4
+
 match errorMsg /^[\t]\+/
 match errorMsg /\s\+$/
 
