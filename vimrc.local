@@ -55,7 +55,9 @@ set incsearch
 " Do not highlight search results
 set nohlsearch
 
-set ff=unix ffs=unix
+set fileformat=unix fileformats=unix
+
+set encoding=utf-8 fileencoding=utf-8 fileencodings=utf-8
 
 " XXX fix Mac backspace
 if has("unix")
@@ -66,7 +68,7 @@ if has("unix")
   endif
 endif
 
-" }}} 
+" }}}
 
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
@@ -74,7 +76,7 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 
 au BufRead,BufNewFile *.phps set filetype=php
 
-" }}} 
+" }}}
 
 " {{{ FIXME Reads the skeleton php file
 " it doen't work if moved into the ftplugin file
