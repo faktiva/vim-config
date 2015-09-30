@@ -39,9 +39,11 @@ set noexpandtab
 set ignorecase                  " caseinsensitive searches
 set showmode                    " always show command or insert mode
 
-" Show line numbers by default
+" Don't show line numbers by default
 set nonumber
-set norelativenumber
+if !has("gui_macvim")
+  set norelativenumber
+endif
 
 " Enable folding by fold markers
 set foldmethod=marker

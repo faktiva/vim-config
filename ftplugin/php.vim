@@ -26,7 +26,9 @@ match errorMsg /\s\+$/
 
 " Show line numbers by default
 set number
-set norelativenumber
+if !has("gui_macvim")
+  set norelativenumber
+endif
 
 " Use incremental searching
 set incsearch
