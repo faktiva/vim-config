@@ -1,14 +1,21 @@
 # vim-configuration
 My favourite vim configurations made portable
 
+Installation:
+---
 
-Just clone the repo into your home `.vim` directory and insert the following to `.vimrc`:
-
+- just clone the repo into your home `.vim` directory
+```
+clone https://github.com/drAlberT/vimcfg4php.git .vim
+```
+- and insert the following to `.vimrc`:
 ```
 " Source all settings
 if filereadable(glob("~/.vim/vimrc.local"))
     source ~/.vim/vimrc.local
 endif
 ```
-
-Then checkout the submodules in bundles/ running `git submodule update --init`
+- then checkout the submodules in *bundles/*
+```
+git submodule update --init
+```
