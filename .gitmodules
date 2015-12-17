@@ -1,20 +1,20 @@
 [submodule "bundle/editorconfig-vim"]
-    path = bundle/editorconfig-vim
-    url = https://github.com/editorconfig/editorconfig-vim.git
+	path = bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "bundle/vim-php-cs-fixer"]
-    path = bundle/vim-php-cs-fixer
-    url = https://github.com/stephpy/vim-php-cs-fixer.git
+	path = bundle/vim-php-cs-fixer
+	url = https://github.com/stephpy/vim-php-cs-fixer.git
 
 [submodule "bundle/vim-twig"]
-    path = bundle/vim-twig
-    url = https://github.com/evidens/vim-twig.git
+	path = bundle/vim-twig
+	url = https://github.com/evidens/vim-twig.git
 
-[submodule "bundle/vim-javascript"]
-    path = bundle/vim-javascript
-    url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/vim-jade"]
-    path = bundle/vim-jade
-    url = https://github.com/digitaltoad/vim-jade.git
-[submodule "closetag.vim"]
-	path = closetag.vim
-	url = git://github.com/docunext/closetag.vim.git
+[submodule "bundle/javascript-syntax"]
+	path = bundle/javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule "bundle/js-html-indent"]
+	path = bundle/js-html-indent
+	url = https://github.com/vim-scripts/JavaScript-Indent.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = https://github.com/rstacruz/sparkup.git
