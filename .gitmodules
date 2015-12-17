@@ -15,3 +15,6 @@
 [submodule "bundle/vim-jade"]
     path = bundle/vim-jade
     url = https://github.com/digitaltoad/vim-jade.git
+[submodule "closetag.vim"]
+	path = closetag.vim
+	url = git://github.com/docunext/closetag.vim.git
