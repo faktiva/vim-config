@@ -24,11 +24,9 @@ set softtabstop=4
 match errorMsg /^[\t]\+/
 match errorMsg /\s\+$/
 
-" Show line numbers by default
-set number
-if !has("gui_macvim")
-  set norelativenumber
-endif
+" iDon't show line numbers by default (slows over ssh)
+set nonumber
+set norelativenumber
 
 " Use incremental searching
 set incsearch
