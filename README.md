@@ -7,7 +7,7 @@ Installation:
 - just clone the repo into your home `.vim` directory
 
     ```
-    clone https://github.com/drAlberT/vimcfg4php.git .vim
+    git clone https://github.com/drAlberT/vimcfg4php.git .vim
     ```
 - and insert the following to `.vimrc`:
 
