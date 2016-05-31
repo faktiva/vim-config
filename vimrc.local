@@ -5,9 +5,10 @@
 "
 
 set nocompatible
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()          " enable pathogen plugin manager
 
+" enable pathogen plugin manager
+runtime bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 
 " {{{  General settings
 
