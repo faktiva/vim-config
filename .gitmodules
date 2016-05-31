@@ -36,3 +36,6 @@
 [submodule "vim-css-color"]
 	path = bundle/syntax-css-color
 	url = https://github.com/ap/vim-css-color
+[submodule "CSApprox"]
+	path = bundle/vim-csapprox
+	url = https://github.com/godlygeek/csapprox
