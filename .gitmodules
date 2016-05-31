@@ -42,3 +42,6 @@
 [submodule "Indend-Guides"]
 	path = bundle/cs-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "triling-whitespace"]
+	path = bundle/cs-trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace
