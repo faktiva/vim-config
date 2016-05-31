@@ -5,14 +5,16 @@
 "
 
 set nocompatible
+runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()          " enable pathogen plugin manager
+
 
 " {{{  General settings
 
+filetype plugin indent on
+
 syntax on
 colorscheme darcula
-
-filetype plugin indent on
 
 " Highlight current line in insert mode.
 autocmd InsertLeave * se nocul
