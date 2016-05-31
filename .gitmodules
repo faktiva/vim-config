@@ -18,3 +18,6 @@
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = https://github.com/rstacruz/sparkup.git
+[submodule "bundle/darcula-theme"]
+	path = bundle/darcula-theme
+	url = https://github.com/blueshirts/darcula.git

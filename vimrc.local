@@ -5,10 +5,14 @@
 "
 
 set nocompatible
-" enable pathogen plugin manager
-call pathogen#infect()
-filetype plugin indent on
+call pathogen#infect()          " enable pathogen plugin manager
+
+" {{{  General settings
+
 syntax on
+colorscheme darcula
+
+filetype plugin indent on
 
 " Highlight current line in insert mode.
 autocmd InsertLeave * se nocul
@@ -18,17 +22,6 @@ autocmd InsertEnter * se cul
 set modeline
 set modelines=5
 
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-
-" {{{  Settings
-
-if &diff
-    "diff mode
-    set diffopt+=iwhite
-endif
-
-colorscheme default
-set background=dark
 set ruler                       " show line and column information
 set laststatus=2
 
@@ -40,29 +33,23 @@ set noexpandtab
 set ignorecase                  " caseinsensitive searches
 set showmode                    " always show command or insert mode
 
-" Don't show line numbers by default
-set nonu nornu
-if !has("gui_macvim")
-  set norelativenumber
+set nonu nornu                  " Don't show line numbers by default
+
+set foldmethod=marker           " Enable folding by fold markers
+set foldclose=all               " Autoclose folds, when moving out of them
+
+set incsearch                   " Use incremental searching
+set hlsearch                    " Highlight search results
+
+" vimdiff specific
+if &diff
+    set diffopt+=iwhite
 endif
 
-" Enable folding by fold markers
-set foldmethod=marker
-
-" Autoclose folds, when moving out of them
-set foldclose=all
-
-" Use incremental searching
-set incsearch
-
-" Do not highlight search results
-set nohlsearch
-
 set fileformat=unix fileformats=unix
-
 set encoding=utf-8 fileencoding=utf-8 fileencodings=utf-8
 
-" XXX fix Mac backspace
+" Fix Mac backspace
 if has("unix")
   let s:uname = system("uname -s")
   if s:uname == "Darwin\n"
@@ -71,7 +58,7 @@ if has("unix")
   endif
 endif
 
-" }}}
+ " }}}
 
 " {{{ .phps files handled like .php
 
