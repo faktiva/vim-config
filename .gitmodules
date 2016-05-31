@@ -33,3 +33,6 @@
 [submodule "coloscheme-molokai"]
 	path = bundle/colorscheme-molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "vim-css-color"]
+	path = bundle/syntax-css-color
+	url = https://github.com/ap/vim-css-color
