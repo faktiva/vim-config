@@ -12,11 +12,21 @@ execute pathogen#infect()
 
 syntax enable
 
-" let g:solarized_termcolors=256
-" set background=dark
-" colorscheme solarized
-colorscheme darcula
+" {{{ Set colors
 
+" SOLARIZED
+"let g:solarized_termcolors=256
+"set background=dark
+"colorscheme solarized
+
+" DARCULA
+"colorscheme darcula
+
+" MOLOKAI
+let g:rehash256 = 1
+colorscheme molokai
+
+" }}}
 
 " {{{  General settings
 
