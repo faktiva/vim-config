@@ -5,10 +5,6 @@
 	path = bundle/vim-php-cs-fixer
 	url = https://github.com/stephpy/vim-php-cs-fixer.git
 
-[submodule "bundle/vim-twig"]
-	path = bundle/vim-twig
-	url = https://github.com/evidens/vim-twig.git
-
 [submodule "bundle/javascript-syntax"]
 	path = bundle/javascript-syntax
 	url = https://github.com/jelera/vim-javascript-syntax.git
@@ -25,3 +21,6 @@
 [submodule "pathogen"]
 	path = bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim-twig"]
+	path = bundle/vim-twig
+	url = https://github.com/lumiliet/vim-twig.git
