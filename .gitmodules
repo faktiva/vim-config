@@ -41,7 +41,16 @@
 	url = https://github.com/godlygeek/csapprox
 [submodule "Indend-Guides"]
 	path = bundle/cs-indent-guides
-	url = git://github.com/nathanaelkane/vim-indent-guides.git
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "triling-whitespace"]
 	path = bundle/cs-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace
+[submodule "easytags.vim"]
+	path = bundle/autocomplete-ctags
+	url = https://github.com/xolox/vim-easytags.git
+[submodule "vim-misc"]
+	path = bundle/vim-xolox-vim-misc
+	url = https://github.com/xolox/vim-misc.git
+[submodule "vim-symfony"]
+	path = bundle/integrate-symfony
+	url = https://github.com/docteurklein/vim-symfony.git
