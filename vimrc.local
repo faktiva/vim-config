@@ -11,8 +11,12 @@ runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 syntax enable
+
+" let g:solarized_termcolors=256
+" coloscheme solarized
+colorscheme darcula
+
 set background=dark
-colorscheme darcula             " darcula | solarized
 
 " {{{  General settings
 
