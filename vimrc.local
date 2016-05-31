@@ -13,10 +13,10 @@ execute pathogen#infect()
 syntax enable
 
 " let g:solarized_termcolors=256
-" coloscheme solarized
+" set background=dark
+" colorscheme solarized
 colorscheme darcula
 
-set background=dark
 
 " {{{  General settings
 
