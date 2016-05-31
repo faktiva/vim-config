@@ -48,6 +48,10 @@ set shiftwidth=4
 set softtabstop=0
 set noexpandtab
 
+" indent style (use nathanaelkane/vim-indent-guides plugin)
+let g:indent_guides_guide_size=1
+let g:indent_guides_start_level=2
+
 set ignorecase                  " caseinsensitive searches
 set showmode                    " always show command or insert mode
 
