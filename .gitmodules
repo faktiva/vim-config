@@ -39,3 +39,6 @@
 [submodule "CSApprox"]
 	path = bundle/vim-csapprox
 	url = https://github.com/godlygeek/csapprox
+[submodule "Indend-Guides"]
+	path = bundle/cs-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
