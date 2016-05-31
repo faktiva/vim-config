@@ -10,12 +10,13 @@ set nocompatible
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+syntax enable
+set background=dark
+colorscheme darcula             " darcula | solarized
+
 " {{{  General settings
 
 filetype plugin indent on
-
-syntax on
-colorscheme darcula
 
 " Highlight current line in insert mode.
 autocmd InsertLeave * se nocul
