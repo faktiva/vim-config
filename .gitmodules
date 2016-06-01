@@ -1,86 +1,90 @@
-[submodule "bundle/editorconfig-vim"]
+
+[submodule "tpope/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "godlygeek/csapprox"]
+	path = bundle/vim-csapprox
+	url = https://github.com/godlygeek/csapprox
+[submodule "scrooloose/nerdtree"]
+	path = bundle/vim-nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+
+[submodule "blueshirts/darcula"]
+	path = bundle/colorscheme-darcula
+	url = https://github.com/blueshirts/darcula.git
+[submodule "altercation/vim-colors-solarized"]
+	path = bundle/colorscheme-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "tomasr/molokai"]
+	path = bundle/colorscheme-molokai
+	url = https://github.com/tomasr/molokai.git
+
+[submodule "tpope/vim-fugitive"]
+	path = bundle/integrate-git
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "editorconfig/editorconfig-vim"]
 	path = bundle/integrate-editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "bundle/vim-php-cs-fixer"]
+[submodule "docteurklein/vim-symfony"]
+	path = bundle/integrate-symfony
+	url = https://github.com/docteurklein/vim-symfony.git
+[submodule "Rican7/php-doc-modded"]
+	path = bundle/integrate-phpdoc
+	url = https://github.com/Rican7/php-doc-modded.git
+[submodule "alvan/vim-php-manual"]
+	path = bundle/integrate-phpmanual
+	url = https://github.com/alvan/vim-php-manual.git
+
+[submodule "stephpy/vim-php-cs-fixer"]
 	path = bundle/cs-fixer-php
 	url = https://github.com/stephpy/vim-php-cs-fixer.git
-
-[submodule "bundle/js-html-indent"]
+[submodule "vim-scripts/JavaScript-Indent"]
 	path = bundle/cs-js-html
 	url = https://github.com/vim-scripts/JavaScript-Indent.git
-[submodule "bundle/sparkup"]
+[submodule "nathanaelkane/vim-indent-guides"]
+	path = bundle/cs-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "bronson/vim-trailing-whitespace"]
+	path = bundle/cs-trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace
+
+[submodule "rstacruz/sparkup"]
 	path = bundle/autocomplete-html
 	url = https://github.com/rstacruz/sparkup.git
 
-[submodule "bundle/darcula-theme"]
-	path = bundle/colorscheme-darcula
-	url = https://github.com/blueshirts/darcula.git
-[submodule "pathogen"]
-	path = bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-[submodule "vim-twig"]
+[submodule "lumiliet/vim-twig"]
 	path = bundle/syntax-twig
 	url = https://github.com/lumiliet/vim-twig.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/colorscheme-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "fugitive"]
-	path = bundle/integrate-git
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "coloscheme-molokai"]
-	path = bundle/colorscheme-molokai
-	url = https://github.com/tomasr/molokai.git
-[submodule "vim-css-color"]
+[submodule "ap/vim-css-color"]
 	path = bundle/syntax-css-color
 	url = https://github.com/ap/vim-css-color
-[submodule "CSApprox"]
-	path = bundle/vim-csapprox
-	url = https://github.com/godlygeek/csapprox
-[submodule "Indend-Guides"]
-	path = bundle/cs-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "triling-whitespace"]
-	path = bundle/cs-trailing-whitespace
-	url = https://github.com/bronson/vim-trailing-whitespace
-[submodule "vim-symfony"]
-	path = bundle/integrate-symfony
-	url = https://github.com/docteurklein/vim-symfony.git
-[submodule "vim-yaml"]
+[submodule "stephpy/vim-yaml"]
 	path = bundle/syntax-yaml
 	url = https://github.com/stephpy/vim-yaml
-[submodule "vim-javascript"]
+[submodule "pangloss/vim-javascript"]
 	path = bundle/syntax-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "css.vim"]
+[submodule "JulesWang/css.vim"]
 	path = bundle/syntax-css
 	url = https://github.com/JulesWang/css.vim.git
-[submodule "html5.vim"]
+[submodule "othree/html5.vim"]
 	path = bundle/syntax-html5
 	url = https://github.com/othree/html5.vim.git
-[submodule "vim-json"]
+[submodule "elzr/vim-json"]
 	path = bundle/syntax-json
 	url = https://github.com/elzr/vim-json.git
-[submodule "vim-markdown"]
+[submodule "tpope/vim-markdown"]
 	path = bundle/syntax-markdown
 	url = https://github.com/tpope/vim-markdown.git
-[submodule "nginx-contrib-vim"]
+[submodule "moskytw/nginx-contrib-vim"]
 	path = bundle/syntax-nginx
 	url = https://github.com/moskytw/nginx-contrib-vim.git
-[submodule "php.vim"]
+[submodule "StanAngeloff/php.vim"]
 	path = bundle/syntax-php
 	url = https://github.com/StanAngeloff/php.vim.git
-[submodule "vim-python-combined"]
+[submodule "mitsuhiko/vim-python-combined"]
 	path = bundle/syntax-python
 	url = https://github.com/mitsuhiko/vim-python-combined.git
-[submodule "XSLT-syntax"]
+[submodule "vim-scripts/XSLT-syntax"]
 	path = bundle/syntax-xsl
 	url = https://github.com/vim-scripts/XSLT-syntax.git
-[submodule "php-doc"]
-	path = bundle/integrate-phpdoc
-	url = https://github.com/Rican7/php-doc-modded.git
-[submodule "php-manual"]
-	path = bundle/integrate-phpmanual
-	url = https://github.com/alvan/vim-php-manual.git
-[submodule "NERDtree"]
-	path = bundle/vim-nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
