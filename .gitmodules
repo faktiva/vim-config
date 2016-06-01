@@ -60,3 +60,6 @@
 [submodule "css.vim"]
 	path = bundle/syntax-css
 	url = https://github.com/JulesWang/css.vim.git
+[submodule "html5.vim"]
+	path = bundle/syntax-html5
+	url = https://github.com/othree/html5.vim.git
