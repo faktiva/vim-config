@@ -5,9 +5,6 @@
 	path = bundle/cs-fixer-php
 	url = https://github.com/stephpy/vim-php-cs-fixer.git
 
-[submodule "bundle/javascript-syntax"]
-	path = bundle/syntax-javascript
-	url = https://github.com/jelera/vim-javascript-syntax.git
 [submodule "bundle/js-html-indent"]
 	path = bundle/cs-js-html
 	url = https://github.com/vim-scripts/JavaScript-Indent.git
@@ -57,3 +54,6 @@
 [submodule "vim-yaml"]
 	path = bundle/syntax-yaml
 	url = https://github.com/stephpy/vim-yaml
+[submodule "vim-javascript"]
+	path = bundle/syntax-javascript
+	url = https://github.com/pangloss/vim-javascript.git
