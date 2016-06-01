@@ -69,3 +69,6 @@
 [submodule "vim-markdown"]
 	path = bundle/syntax-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "nginx-contrib-vim"]
+	path = bundle/syntax-nginx
+	url = https://github.com/moskytw/nginx-contrib-vim.git
