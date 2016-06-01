@@ -82,37 +82,3 @@ endif
 
  " }}}
 
-" {{{ PHP specific settings
-
-" Enable lint checking for PHP files
-autocmd FileType php setlocal makeprg=php\ -l\ %
-autocmd FileType php setlocal errorformat=%m\ in\ %f\ on\ line\ %l
-
-" handle .phps as .php
-au BufRead,BufNewFile *.phps set filetype=php
-
-" FIXME Reads the skeleton php file
-autocmd BufNewFile *.php 0r ~/.vim/php/skeleton.php
-
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
-
-" Symfony settings
-if filereadable(glob("~/.vim/symvimny/symfony.vim"))
-  source ~/.vim/symvimny/symfony.vim
-endif
-
-" PhpDoc
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
-nnoremap <C-P> :call PhpDocSingle()<CR>
-vnoremap <C-P> :call PhpDocRange()<CR>
-
-" }}}
-

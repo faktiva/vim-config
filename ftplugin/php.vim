@@ -1,42 +1,49 @@
-"
-" vim configuration by Emiliano 'AlberT' Gabrielli <emiliano.gabrielli@gmail.com>
-" feel free to use
-"
-" Intended for PHP and Symfony coding
-"
 
-
-" {{{  Settings
-
-" Use filetype plugins, e.g. for PHP
-filetype plugin on
-
-" Show nice info in ruler
-set ruler
-set laststatus=2
+" PHP specific settings
 
 set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
-set shiftwidth=4
-set softtabstop=4
-
+" highlight leading tabs
 match errorMsg /^[\t]\+/
-match errorMsg /\s\+$/
 
-" iDon't show line numbers by default (slows over ssh)
-set nonumber
-set norelativenumber
+" Enable lint checking for PHP files
+set makeprg=php\ -l\ %
+set errorformat=%m\ in\ %f\ on\ line\ %l
 
-" Use incremental searching
-set incsearch
+if !filereadable(expand('%'))
+	0r ~/.vim/extras/php/skeleton.php
+endif
 
-" }}}
-
-" {{{ php_cs_fixer
-
+" {{{ Php-CS-Fixer plugin
 let g:php_cs_fixer_level = "psr2"           " which level ?
 let g:php_cs_fixer_config = "default"       " configuration
 let g:php_cs_fixer_verbose = 1              " Return the output of command if 1, else an inline information.
-
 " }}}
+
+" {{{ Php-Doc plugin
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR>
+" }}}
+
+" {{{ Php-Syntax plugin
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd BufNewFile,BufRead * :call PhpSyntaxOverride()
+augroup END
+" }}}
+
+" {{{ Symfony settings
+if filereadable(glob("~/.vim/extras/symfony/symfony.vim"))
+  source ~/.vim/extras/symfony/symfony.vim
+endif
+" }}}
+
