@@ -54,3 +54,6 @@
 [submodule "vim-symfony"]
 	path = bundle/integrate-symfony
 	url = https://github.com/docteurklein/vim-symfony.git
+[submodule "vim-yaml"]
+	path = bundle/syntax-yaml
+	url = https://github.com/stephpy/vim-yaml
