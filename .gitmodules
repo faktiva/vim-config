@@ -78,3 +78,6 @@
 [submodule "php-doc"]
 	path = bundle/integrate-phpdoc
 	url = https://github.com/Rican7/php-doc-modded.git
+[submodule "php-manual"]
+	path = bundle/integrate-phpmanual
+	url = https://github.com/alvan/vim-php-manual.git
