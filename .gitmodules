@@ -57,3 +57,6 @@
 [submodule "vim-javascript"]
 	path = bundle/syntax-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "css.vim"]
+	path = bundle/syntax-css
+	url = https://github.com/JulesWang/css.vim.git
