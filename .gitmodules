@@ -72,3 +72,6 @@
 [submodule "nginx-contrib-vim"]
 	path = bundle/syntax-nginx
 	url = https://github.com/moskytw/nginx-contrib-vim.git
+[submodule "php.vim"]
+	path = bundle/syntax-php
+	url = https://github.com/StanAngeloff/php.vim.git
