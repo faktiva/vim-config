@@ -81,3 +81,6 @@
 [submodule "php-manual"]
 	path = bundle/integrate-phpmanual
 	url = https://github.com/alvan/vim-php-manual.git
+[submodule "NERDtree"]
+	path = bundle/vim-nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
