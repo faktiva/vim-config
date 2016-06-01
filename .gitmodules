@@ -75,3 +75,6 @@
 [submodule "php.vim"]
 	path = bundle/syntax-php
 	url = https://github.com/StanAngeloff/php.vim.git
+[submodule "vim-python-combined"]
+	path = bundle/syntax-python
+	url = https://github.com/mitsuhiko/vim-python-combined.git
