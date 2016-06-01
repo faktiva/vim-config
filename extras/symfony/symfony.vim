@@ -5,7 +5,6 @@ autocmd! bufwritepost .vimrc source %
 set list
 set listchars=tab:>-,trail:-
 
-
 " Auto indent after a {
 set autoindent
 set smartindent
@@ -63,7 +62,6 @@ map! =symv   class myUnnamedValidator extends sfValidator<CR>{<CR>public functio
 
 " }}} Symfony Code Templates
 
-:autocmd BufNewFile */validate/*.yml 0r ~/.vim/symvimny/validate.yml
-:autocmd BufNewFile */config/*-schema.yml 0r ~/.vim/symvimny/schema.yml
-:autocmd BufNewFile */config/*-schema.xml 0r ~/.vim/symvimny/schema.xml
+autocmd BufNewFile */validate/*.yml 0r ~/.vim/extras/symfony/validate.yml
+autocmd BufNewFile */config/*-schema.yml 0r ~/.vim/extras/symfony/schema.yml
 
