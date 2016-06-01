@@ -84,6 +84,10 @@ endif
 
 " {{{ PHP specific settings
 
+" Enable lint checking for PHP files
+autocmd FileType php setlocal makeprg=php\ -l\ %
+autocmd FileType php setlocal errorformat=%m\ in\ %f\ on\ line\ %l
+
 " handle .phps as .php
 au BufRead,BufNewFile *.phps set filetype=php
 
