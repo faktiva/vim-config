@@ -78,3 +78,6 @@
 [submodule "vim-python-combined"]
 	path = bundle/syntax-python
 	url = https://github.com/mitsuhiko/vim-python-combined.git
+[submodule "XSLT-syntax"]
+	path = bundle/syntax-xls
+	url = https://github.com/vim-scripts/XSLT-syntax.git
