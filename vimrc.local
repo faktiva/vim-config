@@ -82,34 +82,28 @@ endif
 
  " }}}
 
-" {{{ .phps files handled like .php
+" {{{ PHP specific settings
 
+" handle .phps as .php
 au BufRead,BufNewFile *.phps set filetype=php
 
-" }}}
-
-" {{{ FIXME Reads the skeleton php file
-" it doesn't work if moved into the ftplugin file
-
-" Note: The normal command afterwards deletes an ugly pending line and moves
-" the cursor to the middle of the file.
+" FIXME Reads the skeleton php file
 autocmd BufNewFile *.php 0r ~/.vim/php/skeleton.php
 
-" }}}
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
 
-" {{{   Symfony settings
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
 
+" Symfony settings
 if filereadable(glob("~/.vim/symvimny/symfony.vim"))
   source ~/.vim/symvimny/symfony.vim
 endif
 
 " }}}
 
-" {{{    HTML settings
-
-if filereadable(glob("~/.vim/bundle/closetag/plugin/closetag.vimsource"))
-    autocmd FileType html,htmldjango,jinjahtml,eruby,mako  let b:closetag_html_style=1
-    autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vimsource
-endif
-
-" }}}
