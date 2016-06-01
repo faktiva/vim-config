@@ -75,3 +75,6 @@
 [submodule "XSLT-syntax"]
 	path = bundle/syntax-xsl
 	url = https://github.com/vim-scripts/XSLT-syntax.git
+[submodule "php-doc"]
+	path = bundle/integrate-phpdoc
+	url = https://github.com/Rican7/php-doc-modded.git
