@@ -63,3 +63,6 @@
 [submodule "html5.vim"]
 	path = bundle/syntax-html5
 	url = https://github.com/othree/html5.vim.git
+[submodule "vim-json"]
+	path = bundle/syntax-json
+	url = https://github.com/elzr/vim-json.git
