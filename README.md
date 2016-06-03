@@ -39,17 +39,14 @@ The following plugins are installed and configured:
 - [Pathogen](https://github.com/tpope/vim-pathogen.git) _(Vim plugin manager)_
 - **[NERDTree](https://github.com/scrooloose/nerdtree) _(Directory tree explorer)_**
 - **[Fugitive](https://github.com/tpope/vim-fugitive.git) _(GIT integration)_**
-
 - [CSApprox](https://github.com/godlygeek/csapprox)
 - [Editorconfig](https://github.com/editorconfig/editorconfig-vim)
 - [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides)
 - **[Better Whitespace](https://github.com/ntpeters/vim-better-whitespace)**
-
 - **[Sparkup](https://github.com/rstacruz/sparkup.git) _(write HTML code faster)_**
 - **[PHP manual](https://github.com/alvan/vim-php-manual.git)**
-- [PHP CS Fixer](https://github.com/stephpy/vim-php-cs-fixer.git) _(integrate [FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer))_
+- [PHP CS Fixer](https://github.com/stephpy/vim-php-cs-fixer.git) _(integrate [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer))_
 - [CSS colors](https://github.com/ap/vim-css-color)
-
 - [Vim-Symfony](https://github.com/docteurklein/vim-symfony.git)
 - [PHP-Doc](https://github.com/Rican7/php-doc-modded.git)
 - [Web Indent](https://github.com/vim-scripts/JavaScript-Indent.git) _(Javascript and HTML indenter)_
