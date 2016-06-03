@@ -14,7 +14,7 @@ syntax enable
 
 " {{{ Color Schemes
 
-call togglebg#map("<Leader>bg")
+call togglebg#map("<C-b><C-g>")
 
 " {{{ Solarized
 " https://github.com/altercation/vim-colors-solarized.git
