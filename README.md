@@ -1,4 +1,5 @@
-# vim-configuration
+# Web/PHP enhanced vim configuration
+
 A set of pre-configured plugins that made the PHP coder happyer
 
 ## Installation:
