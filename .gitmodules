@@ -44,10 +44,6 @@
 [submodule "nathanaelkane/vim-indent-guides"]
 	path = bundle/cs-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "bronson/vim-trailing-whitespace"]
-	path = bundle/cs-trailing-whitespace
-	url = https://github.com/bronson/vim-trailing-whitespace
-
 [submodule "rstacruz/sparkup"]
 	path = bundle/autocomplete-html
 	url = https://github.com/rstacruz/sparkup.git
@@ -88,3 +84,6 @@
 [submodule "vim-scripts/XSLT-syntax"]
 	path = bundle/syntax-xsl
 	url = https://github.com/vim-scripts/XSLT-syntax.git
+[submodule "Better Whitespace"]
+	path = bundle/cs-trailing-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
