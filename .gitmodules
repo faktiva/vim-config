@@ -90,3 +90,6 @@
 [submodule "syntastic"]
 	path = bundle/integrate-syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim-blade"]
+	path = bundle/syntax-blade
+	url = https://github.com/jwalton512/vim-blade.git
