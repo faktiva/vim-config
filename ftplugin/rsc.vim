@@ -1,25 +1,30 @@
 " Vim syntax file
 " Language: Router OS Scripting Syntax
+" Author: Emiliano Gabrielli <emiliano.gabrielli@gmail.com>
 "
-
-syn case ignore
 
 set iskeyword=A-Z,a-z,48-57,-
 
-syn match   rscComment "^#.*"
+syn case ignore
 
-syn region  rscString start=+"+ skip=+\\n\|\\"+ end=+"+ contains=rscSpecial
+syn keyword Todo XXX TODO NOT contained
+syn keyword Error FIXME contained
+
+syn match   rscComment "^#.*" contains=Todo,Error
+
+syn region  rscString matchgroup=rscQuote start='"' skip='\\n\|\\"' end='"' contains=rscSpecial,rscEscape
 
 syn match   rscNetAddress "\(\(25[0-5]\|2[0-4][0-9]\|[01]\?[0-9][0-9]\?\)\.\)\{3\}\(25[0-5]\|2[0-4][0-9]\|[01]\?[0-9][0-9]\?\)\(/\(3[0-2]\|[12]\?[0-9]\)\)\?" contains=rscNetMask
 syn match   rscNetMask "/\(3[0-2]\|[12]\?[0-9]\)" contained contains=rscSeparator
 
 syn match   rscValue "\(\S\+=\)\@<=\"[^\"]*\"\|\(\S\+=\)\@<=\S\+" contains=rscNetAddress,rscBoolean,rscSpecial,rscSeparator,rscNumber,rscString
 
-syn match   rscSpecial "[!$():\[\]{|}=]" contains=rscOperator contained
 syn match   rscOperator "!" contained
 syn match   rscSeparator "[,/]" contained
+syn match   rscEscape "\\." contained
+syn match   rscSpecial "[!$():\[\]{|}=]" contains=rscOperator contained
 
-syn region  rscContext start=+/+ end=+\n+
+syn region  rscContext matchgroup=rscQuote start="/" end="\n"
 syn match   rscContext "\<\(certificate\|console\|disk\|driver\|file\|interface\|ip\|ipv6\|lcd\|log\|mpls\|partitions\)\>=\@!"
 syn match   rscContext "\<\(partitions\|port\|queue\|radius\|routing\|snmp\|special-login\|store\|system\|tool\|user\)\>=\@!"
 
@@ -138,9 +143,10 @@ syn keyword rscKeyword use-ip-firewall-for-vlan vlan-id
 syn keyword rscKeyword filter-ip-address filter-ip-protocol use-ip-firewall-for-pppoe use-ip-firewall
 syn keyword rscKeyword wds-cost-range wds-default-bridge wds-default-cost wds-ignore-ssid wds-mode
 
-syn keyword rscKeyword tcp-syncookies color-scheme default-screen server-dns-names time-interval hide-pin-number pin-number
+syn keyword rscKeyword tcp-syncookies color-scheme default-name default-screen server-dns-names time-interval hide-pin-number pin-number
+	\ cpu-frequency memory-frequency protected-routerboot limit
 
-syn keyword rscProtocol bgp ip ipsec ipv6 ldp ospf ospf-v3 ppp rip snmp tcp udp
+syn keyword rscProtocol bgp ip ipsec ipv6 ldp ospf ospf-v3 ppp rip snmp tcp udp icmp
 
 syn keyword rscService api api-ssl dns ftp http https pim ntp smb ssh telnet winbox www www-ssl
 
@@ -151,8 +157,6 @@ syn keyword rscInterface sstp-client sstp-server traffic-eng vlan vpls vrrp
 
 syn keyword rscConnState new related established invalid
 
-" --- vim highlight mappings ---
-"
 " Boolean a boolean constant: TRUE, false
 hi link rscBoolean       Boolean
 " Character a character constant: 'c', '\n'
@@ -186,6 +190,7 @@ hi link rscNetMask       Define
 hi link rscRepeat        Repeat
 " Special any special symbol
 hi link rscSpecial       Special
+hi link rscEscape        Special
 " Statement any statement
 hi link rscContext       Statement
 " StorageClass static, register, volatile, etc.
@@ -200,5 +205,6 @@ hi link rscService       Structure
 hi link rscType          Type
 hi link rscProtocol      Type
 
+hi link rscQuote         Quote
 
 let b:current_syntax = "rsc"
