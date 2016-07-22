@@ -78,7 +78,7 @@ if &diff
     set diffopt+=iwhite
 endif
 
-set fileformat=unix fileformats=unix
+set fileformat=unix fileformats=unix,dos,mac
 set encoding=utf-8 fileencoding=utf-8 fileencodings=utf-8
 
 " Fix Mac backspace
