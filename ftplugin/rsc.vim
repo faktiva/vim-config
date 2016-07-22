@@ -1,46 +1,63 @@
 " Vim syntax file
 " Language: Router OS Scripting Syntax
-" Author: Emiliano Gabrielli <emiliano.gabrielli@gmail.com>
+" Author:   Emiliano Gabrielli <emiliano.gabrielli@gmail.com>
 "
 
 set iskeyword=A-Z,a-z,48-57,-
 
+syn keyword Todo FIXME XXX TODO NOT contained
 syn case ignore
 
-syn keyword Todo XXX TODO NOT contained
-syn keyword Error FIXME contained
 
-syn match   rscComment "^#.*" contains=Todo,Error
+syn match   rscValue '\(\S\+=\)\@<="[^"]*"\|\(\S\+=\)\@<=\S\+' contains=rscNetAddress,rscBoolean,rscSeparator,rscNumber,rscString
 
-syn region  rscString matchgroup=rscQuote start='"' skip='\\n\|\\"' end='"' contains=rscSpecial,rscEscape
+syn match   rscSeparator "[,/:]" contained
+syn match   rscEscape '\\.' contained
+syn match   rscStrSpecial "[():\[\]{|}]" contained
 
+" network address/mask
 syn match   rscNetAddress "\(\(25[0-5]\|2[0-4][0-9]\|[01]\?[0-9][0-9]\?\)\.\)\{3\}\(25[0-5]\|2[0-4][0-9]\|[01]\?[0-9][0-9]\?\)\(/\(3[0-2]\|[12]\?[0-9]\)\)\?" contains=rscNetMask
 syn match   rscNetMask "/\(3[0-2]\|[12]\?[0-9]\)" contained contains=rscSeparator
 
-syn match   rscValue "\(\S\+=\)\@<=\"[^\"]*\"\|\(\S\+=\)\@<=\S\+" contains=rscNetAddress,rscBoolean,rscSpecial,rscSeparator,rscNumber,rscString
-
-syn match   rscOperator "!" contained
-syn match   rscSeparator "[,/]" contained
-syn match   rscEscape "\\." contained
-syn match   rscSpecial "[!$():\[\]{|}=]" contains=rscOperator contained
-
+" comments
+syn match   rscComment "^#.*" contains=Todo
+" strings
+syn region  rscString matchgroup=rscQuote start='"' skip='\\n\|\\"' end='"' contains=rscSpecial,rscEscape
+" context from /
 syn region  rscContext matchgroup=rscQuote start="/" end="\n"
 syn match   rscContext "\<\(certificate\|console\|disk\|driver\|file\|interface\|ip\|ipv6\|lcd\|log\|mpls\|partitions\)\>=\@!"
 syn match   rscContext "\<\(partitions\|port\|queue\|radius\|routing\|snmp\|special-login\|store\|system\|tool\|user\)\>=\@!"
-
+" language keywords
+syn keyword rscType global local
+" conditional keywords
+syn keyword rscConditional if
+" loop keywords
+syn keyword rscRepeat do for foreach while
+" operators
+syn match   rscOperator " [\+\-\*\<\>\=\!\~\^\&\.\,] "
+syn match   rscOperator "[\<\>\!]="
+syn match   rscOperator "\(<<\|>>\)"
+syn match   rscOperator "[\+\-]\(\d\)\@="
+" boolean values
+syn keyword rscBoolean yes no
+" functions
+syn keyword rscFunction len setup typeof toarray tobool toid toip toip6 tonum tostr totime
+" protocols
+syn keyword rscProtocol bgp ip ipsec ipv6 ldp ospf ospf-v3 ppp rip snmp tcp udp icmp
+" services
+syn keyword rscService api api-ssl dns ftp http https pim ntp smb ssh telnet winbox www www-ssl
+" interfaces
+syn keyword rscInterface 6to4 bonding bridge eoip eoipv6 ethernet gre gre6 ipip ipipv6 isdn-client
+syn keyword rscInterface isdn-server l2tp-client l2tp-server lte mesh ovpn-client ovpn-server
+syn keyword rscInterface ppp-client pppoe-client pppoe-server ppp-server pptp-client pptp-server
+syn keyword rscInterface sstp-client sstp-server traffic-eng vlan vpls vrrp
+" fw connections states
+syn keyword rscConnState new related established invalid
+" actions
 syn keyword rscAction accept add beep blink delay drop execute export find get import
 syn keyword rscAction log parse password pick ping print put quit redirect redo resolve set setup undo
 
-syn keyword rscBoolean yes no
-
-syn keyword rscConditional if
-
-syn keyword rscFunction len setup typeof toarray tobool toid toip toip6 tonum tostr totime
-
-syn keyword rscRepeat do for foreach while
-
-syn keyword rscType global local
-
+" allowed keywords
 syn keyword rscKeyword certificate detail error file info led nothing password time
 syn keyword rscKeyword aaa accessible-via-web accounting account-local-traffic ac-name action
 syn keyword rscKeyword active-flow-timeout active-mode add-default-route ageing-time align
@@ -142,20 +159,12 @@ syn keyword rscKeyword allocate-udp-ports-from max-udp-packet-size udp-stream-ti
 syn keyword rscKeyword use-ip-firewall-for-vlan vlan-id
 syn keyword rscKeyword filter-ip-address filter-ip-protocol use-ip-firewall-for-pppoe use-ip-firewall
 syn keyword rscKeyword wds-cost-range wds-default-bridge wds-default-cost wds-ignore-ssid wds-mode
-
 syn keyword rscKeyword tcp-syncookies color-scheme default-name default-screen server-dns-names time-interval hide-pin-number pin-number
-	\ cpu-frequency memory-frequency protected-routerboot limit
+syn keyword rscKeyword cpu-frequency memory-frequency protected-routerboot limit
 
-syn keyword rscProtocol bgp ip ipsec ipv6 ldp ospf ospf-v3 ppp rip snmp tcp udp icmp
-
-syn keyword rscService api api-ssl dns ftp http https pim ntp smb ssh telnet winbox www www-ssl
-
-syn keyword rscInterface 6to4 bonding bridge eoip eoipv6 ethernet gre gre6 ipip ipipv6 isdn-client
-syn keyword rscInterface isdn-server l2tp-client l2tp-server lte mesh ovpn-client ovpn-server
-syn keyword rscInterface ppp-client pppoe-client pppoe-server ppp-server pptp-client pptp-server
-syn keyword rscInterface sstp-client sstp-server traffic-eng vlan vpls vrrp
-
-syn keyword rscConnState new related established invalid
+"
+" Highlight mappings
+"
 
 " Boolean a boolean constant: TRUE, false
 hi link rscBoolean       Boolean
