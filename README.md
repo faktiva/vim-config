@@ -65,4 +65,4 @@ The following plugins are installed and configured:
 - **[TWIG](https://github.com/lumiliet/vim-twig.git)**
 - [XSL](https://github.com/vim-scripts/XSLT-syntax.git)
 - **[YAML](https://github.com/stephpy/vim-yaml)**
-- **Router OS** (`.rsc`)
+- **[Router OS](https://github.com/drAlberT/vimcfg4php/blob/master/ftplugin/rsc.vim)** (`.rsc`)
