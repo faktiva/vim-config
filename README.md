@@ -7,7 +7,7 @@ A set of pre-configured plugins that made the PHP coder happyer
 - clone the repo into **your home `.vim`** directory
 
     ```Shell
-    git clone https://github.com/drAlberT/vimcfg4php.git .vim
+    git clone https://github.com/faktiva/vimcfg4php.git .vim
     ```
 
 - insert the following to `.vimrc`:
@@ -65,4 +65,4 @@ The following plugins are installed and configured:
 - **[TWIG](https://github.com/lumiliet/vim-twig.git)**
 - [XSL](https://github.com/vim-scripts/XSLT-syntax.git)
 - **[YAML](https://github.com/stephpy/vim-yaml)**
-- **[Router OS](https://github.com/drAlberT/vimcfg4php/blob/master/ftplugin/rsc.vim)** (`.rsc`)
+- **[Router OS](https://github.com/faktiva/vimcfg4php/blob/master/ftplugin/rsc.vim)** (`.rsc`)
