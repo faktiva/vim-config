@@ -1,6 +1,6 @@
 # Web/PHP enhanced vim configuration
 
-A set of pre-configured plugins that made the PHP coder happyer
+A set of pre-configured VIM plugins that make the Web Developer happyer
 
 ## Installation:
 
