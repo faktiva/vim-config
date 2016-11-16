@@ -7,7 +7,7 @@ An _**easy to deploy**_ set of pre-configured `VIM` plugins and configurations t
 - clone the repo into **your home `.vim`** directory
 
     ```Shell
-    git clone https://github.com/faktiva/vimcfg4php.git .vim
+    git clone https://github.com/faktiva/vim-config-webdev.git ~/.vim
     ```
 
 - insert the following to `.vimrc`:
@@ -22,7 +22,7 @@ An _**easy to deploy**_ set of pre-configured `VIM` plugins and configurations t
 - then install the submodules inside _`bundles/`_
 
     ```Shell
-    git submodule update --init
+    cd ~/.vim ; git submodule update --init
     ```
 
 ## Features
