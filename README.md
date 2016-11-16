@@ -1,4 +1,4 @@
-# An enhanced _WebDev_ / _SysAdmin_ targeted `vim` configuration
+# `vim` configuration for enhanced _WebDevs_ / _SysAdmins_
 
 An _**easy to deploy**_ set of pre-configured `VIM` plugins and configurations targeted to make Web Developers and System Administrators more happy ;)
 
