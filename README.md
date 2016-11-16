@@ -1,6 +1,6 @@
-# Web/PHP enhanced vim configuration
+# An enhanced _WebDev_ / _SysAdmin_ targeted `vim` configuration
 
-A set of pre-configured VIM plugins that make the Web Developer happyer
+An _**easy to deploy**_ set of pre-configured `VIM` plugins and configurations targeted to make Web Developers and System Administrators more happy ;)
 
 ## Installation:
 
