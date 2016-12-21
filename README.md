@@ -57,6 +57,7 @@ The following plugins are installed and configured:
 - **[CSS](https://github.com/JulesWang/css.vim)**
 - **[HTML5](https://github.com/othree/html5.vim)**
 - **[Javascript](https://github.com/pangloss/vim-javascript)**
+- [JSX](https://github.com/mxw/vim-jsx.git)
 - **[JSON](https://github.com/elzr/vim-json)**
 - [Markdown](https://github.com/tpope/vim-markdown)
 - [nginx](https://github.com/moskytw/nginx-contrib-vim)
