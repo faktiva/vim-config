@@ -151,6 +151,7 @@ let g:syntastic_check_on_wq = 0
 " https://github.com/alvan/vim-php-manual.git
 " https://github.com/stephpy/vim-php-cs-fixer.git
 " https://github.com/vim-scripts/JavaScript-Indent.git
+" https://github.com/mxw/vim-jsx.git
 " https://github.com/bronson/vim-trailing-whitespace
 " https://github.com/lumiliet/vim-twig.git
 " https://github.com/ap/vim-css-color

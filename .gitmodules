@@ -57,6 +57,9 @@
 [submodule "YAML syntax"]
 	path = bundle/syntax-yaml
 	url = https://github.com/stephpy/vim-yaml.git
+[submodule "JSX syntax"]
+	path = bundle/syntax-jsx
+	url = https://github.com/mxw/vim-jsx.git
 [submodule "JS syntax"]
 	path = bundle/syntax-javascript
 	url = https://github.com/pangloss/vim-javascript.git
