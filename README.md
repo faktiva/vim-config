@@ -65,6 +65,7 @@ The following plugins are installed and configured:
 - **[TWIG](https://github.com/lumiliet/vim-twig)**
 - [XSL](https://github.com/vim-scripts/XSLT-syntax)
 - **[YAML](https://github.com/stephpy/vim-yaml)**
+- **[API Blueprint](https://github.com/kylef/apiblueprint.vim.git)**
 
 - [NGINX](https://github.com/chr4/nginx.vim.git)
 - [Puppet](https://github.com/puppetlabs/puppet-syntax-vim.git)

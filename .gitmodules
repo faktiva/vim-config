@@ -99,3 +99,6 @@
 [submodule "NGINX syntax"]
 	path = bundle/syntax-nginx
 	url = https://github.com/chr4/nginx.vim.git
+[submodule "API Blueprint syntax"]
+	path = bundle/syntax-apiblueprint
+	url = https://github.com/kylef/apiblueprint.vim.git
