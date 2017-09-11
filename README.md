@@ -67,3 +67,4 @@ The following plugins are installed and configured:
 - [XSL](https://github.com/vim-scripts/XSLT-syntax)
 - **[YAML](https://github.com/stephpy/vim-yaml)**
 - **[Router OS](https://github.com/faktiva/vimcfg4php/blob/master/ftplugin/rsc)** (`.rsc`)
+- [Puppet](https://github.com/puppetlabs/puppet-syntax-vim.git)
