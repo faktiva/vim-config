@@ -78,9 +78,6 @@
 [submodule "Markdown syntax"]
 	path = bundle/syntax-markdown
 	url = https://github.com/tpope/vim-markdown.git
-[submodule "nginx syntax"]
-	path = bundle/syntax-nginx
-	url = https://github.com/moskytw/nginx-contrib-vim.git
 [submodule "PHP syntax"]
 	path = bundle/syntax-php
 	url = https://github.com/StanAngeloff/php.vim.git
@@ -99,3 +96,6 @@
 [submodule "Puppet syntax"]
 	path = bundle/syntax-puppet
 	url = https://github.com/puppetlabs/puppet-syntax-vim.git
+[submodule "NGINX syntax"]
+	path = bundle/syntax-nginx
+	url = https://github.com/chr4/nginx.vim.git

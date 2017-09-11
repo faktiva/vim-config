@@ -60,11 +60,13 @@ The following plugins are installed and configured:
 - [JSX](https://github.com/mxw/vim-jsx.git)
 - **[JSON](https://github.com/elzr/vim-json)**
 - [Markdown](https://github.com/tpope/vim-markdown)
-- [nginx](https://github.com/moskytw/nginx-contrib-vim)
 - **[PHP](https://github.com/StanAngeloff/php.vim)**
 - [Python](https://github.com/mitsuhiko/vim-python-combined)
 - **[TWIG](https://github.com/lumiliet/vim-twig)**
 - [XSL](https://github.com/vim-scripts/XSLT-syntax)
 - **[YAML](https://github.com/stephpy/vim-yaml)**
-- **[Router OS](https://github.com/faktiva/vimcfg4php/blob/master/ftplugin/rsc)** (`.rsc`)
+
+- [NGINX](https://github.com/chr4/nginx.vim.git)
 - [Puppet](https://github.com/puppetlabs/puppet-syntax-vim.git)
+- **[Router OS](https://github.com/faktiva/vim-config/blob/master/ftplugin/rsc.vim)** (`.rsc`)
+
