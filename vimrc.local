@@ -60,7 +60,7 @@ set laststatus=2
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0
-set noexpandtab
+set expandtab
 
 set ignorecase                  " caseinsensitive searches
 set showmode                    " always show command or insert mode
@@ -76,6 +76,7 @@ set hlsearch                    " Highlight search results
 " vimdiff specific
 if &diff
     set diffopt+=iwhite
+    highlight! link DiffText Todo
 endif
 
 set fileformat=unix fileformats=unix,dos,mac
