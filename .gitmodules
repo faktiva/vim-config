@@ -34,6 +34,9 @@
 [submodule "PHP manual"]
 	path = bundle/integrate-phpmanual
 	url = https://github.com/alvan/vim-php-manual.git
+[submodule "Terraform integration and syntax"]
+	path = bundle/integrate-terraform
+	url = https://github.com/hashivim/vim-terraform.git
 
 [submodule "PHP CS Fixer"]
 	path = bundle/cs-fixer-php

@@ -51,6 +51,7 @@ The following plugins are installed and configured:
 - [Vim-Symfony](https://github.com/docteurklein/vim-symfony)
 - [PHP-Doc](https://github.com/Rican7/php-doc-modded)
 - [Web Indent](https://github.com/vim-scripts/JavaScript-Indent) _(Javascript and HTML indenter)_
+- **[Terraform](https://github.com/hashivim/vim-terraform) _(adds a `:Terraform` command that runs terraform, with tab completion of subcommands)_**
 
 ### Enhanced Syntax highlight
 
@@ -66,8 +67,8 @@ The following plugins are installed and configured:
 - [XSL](https://github.com/vim-scripts/XSLT-syntax)
 - **[YAML](https://github.com/stephpy/vim-yaml)**
 - **[API Blueprint](https://github.com/kylef/apiblueprint.vim.git)**
-
 - [NGINX](https://github.com/chr4/nginx.vim.git)
 - [Puppet](https://github.com/puppetlabs/puppet-syntax-vim.git)
 - **[Router OS](https://github.com/faktiva/vim-config/blob/master/ftplugin/rsc.vim)** (`.rsc`)
+- **[Terraform](https://github.com/hashivim/vim-terraform)** (`*.tf`, `*.tfvars`, and `*.tfstate`)
 
