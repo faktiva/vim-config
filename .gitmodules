@@ -2,9 +2,6 @@
 [submodule "Pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "CSApprox"]
-	path = bundle/vim-csapprox
-	url = https://github.com/godlygeek/csapprox.git
 [submodule "NERDTree"]
 	path = bundle/vim-nerdtree
 	url = https://github.com/scrooloose/nerdtree.git

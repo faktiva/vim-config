@@ -40,7 +40,6 @@ The following plugins are installed and configured:
 - [Pathogen](https://github.com/tpope/vim-pathogen) _(Vim plugin manager)_
 - **[NERDTree](https://github.com/scrooloose/nerdtree) _(Directory tree explorer)_**
 - **[GIT.vim](https://github.com/motemen/git-vim) _(GIT integration)_**
-- [CSApprox](https://github.com/godlygeek/csapprox)
 - [Editorconfig](https://github.com/editorconfig/editorconfig-vim) _[add Editorconfig support](http://editorconfig.org/)_
 - [Indent Guides](https://github.com/nathanaelkane/vim-indent-guides)
 - **[Better Whitespace](https://github.com/ntpeters/vim-better-whitespace)**
