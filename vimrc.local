@@ -140,32 +140,11 @@ let g:syntastic_check_on_wq = 0
 
 " }}}
 
+" {{{ Terraform
+" https://github.com/hashivim/vim-terraform
+"
 
-" {{ Other plugins installed not needing configuration
-"
-" https://github.com/godlygeek/csapprox
-" https://github.com/tpope/vim-fugitive.git
-" https://github.com/rstacruz/sparkup.git
-"
-" https://github.com/docteurklein/vim-symfony.git
-" https://github.com/Rican7/php-doc-modded.git
-" https://github.com/alvan/vim-php-manual.git
-" https://github.com/stephpy/vim-php-cs-fixer.git
-" https://github.com/vim-scripts/JavaScript-Indent.git
-" https://github.com/mxw/vim-jsx.git
-" https://github.com/bronson/vim-trailing-whitespace
-" https://github.com/lumiliet/vim-twig.git
-" https://github.com/ap/vim-css-color
-" https://github.com/stephpy/vim-yaml
-" https://github.com/pangloss/vim-javascript.git
-" https://github.com/JulesWang/css.vim.git
-" https://github.com/othree/html5.vim.git
-" https://github.com/elzr/vim-json.git
-" https://github.com/tpope/vim-markdown.git
-" https://github.com/moskytw/nginx-contrib-vim.git
-" https://github.com/StanAngeloff/php.vim.git
-" https://github.com/mitsuhiko/vim-python-combined.git
-" https://github.com/vim-scripts/XSLT-syntax.git
+let g:terraform_align=1
 
 " }}}
 
