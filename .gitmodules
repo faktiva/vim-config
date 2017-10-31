@@ -102,3 +102,6 @@
 [submodule "API Blueprint syntax"]
 	path = bundle/syntax-apiblueprint
 	url = https://github.com/kylef/apiblueprint.vim.git
+[submodule "Elixir syntax"]
+	path = bundle/syntax-elixir
+	url = https://github.com/elixir-editors/vim-elixir.git
