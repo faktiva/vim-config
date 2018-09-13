@@ -17,7 +17,7 @@ An _**easy to deploy**_ set of pre-configured `VIM` plugins and configurations t
     if filereadable(glob("~/.vim/vimrc.local"))
         source ~/.vim/vimrc.local
     endif
-    
+
     " Invert paste when \p or <F3> is pressed
     :nnoremap <leader>p :set invpaste<CR>
     :nnoremap <F3> :set invpaste<CR>
