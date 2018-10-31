@@ -102,6 +102,12 @@
 [submodule "Twig syntax"]
 	path = bundle/syntax-twig
 	url = https://github.com/lumiliet/vim-twig.git
+[submodule "UltiSnips"]
+	path = bundle/ultisnips
+	url = https://github.com/sirver/ultisnips
+[submodule "UltiSnips default snippets"]
+	path = vim-snippets
+	url = https://github.com/honza/vim-snippets.git
 [submodule "XSLT syntax"]
 	path = bundle/syntax-xsl
 	url = https://github.com/vim-scripts/XSLT-syntax.git

@@ -47,6 +47,7 @@ The following plugins are installed and configured:
 - **[PHP manual](https://github.com/alvan/vim-php-manual)**
 - **[Sparkup](https://github.com/rstacruz/sparkup) _(write HTML code faster)_**
 - **[Terraform](https://github.com/hashivim/vim-terraform) _(adds a `:Terraform` command that runs terraform, with tab completion of subcommands)_**
+- **[UltiSnips](https://github.com/SirVer/ultisnips)** _(the power of snippets in vim)_
 - [Vim-Symfony](https://github.com/docteurklein/vim-symfony)
 - [Web Indent](https://github.com/vim-scripts/JavaScript-Indent) _(Javascript and HTML indenter)_
 

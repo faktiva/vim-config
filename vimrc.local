@@ -14,148 +14,165 @@ syntax enable
 
 " {{{ Color Schemes
 
-call togglebg#map("<C-b><C-g>")
+    call togglebg#map("<C-b><C-g>")
 
-" {{{ Solarized
-" https://github.com/altercation/vim-colors-solarized.git
+    " {{{ Solarized
+    " https://github.com/altercation/vim-colors-solarized.git
 
-"let g:solarized_termcolors=256
-"set background=dark
-"colorscheme solarized
+    "let g:solarized_termcolors=256
+    "set background=dark
+    "colorscheme solarized
 
-" }}}
+    " }}}
 
-" {{{ Darcula
-" https://github.com/blueshirts/darcula.git
+    " {{{ Darcula
+    " https://github.com/blueshirts/darcula.git
 
-"colorscheme darcula
+    "colorscheme darcula
 
-" }}}
+    " }}}
 
-" {{{ Molokai
-" https://github.com/tomasr/molokai.git
+    " {{{ Molokai
+    " https://github.com/tomasr/molokai.git
 
-let g:rehash256 = 1
-colorscheme molokai
+    let g:rehash256 = 1
+    colorscheme molokai
 
-" }}}
+    " }}}
 
 " }}}
 
 " {{{  General
 
-" jump to the last position when reopening a file
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+    " jump to the last position when reopening a file
+    if has("autocmd")
+        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    endif
 
-" load indentation rules and plugins according to the detected filetype.
-if has("autocmd")
-    filetype plugin indent on
-endif
+    " load indentation rules and plugins according to the detected filetype.
+    if has("autocmd")
+        filetype plugin indent on
+    endif
 
 
-" Highlight current line in insert mode.
-if has("autocmd")
-    autocmd InsertLeave * se nocul
-    autocmd InsertEnter * se cul
-endif
+    " Highlight current line in insert mode.
+    if has("autocmd")
+        autocmd InsertLeave * se nocul
+        autocmd InsertEnter * se cul
+    endif
 
-" Enable modeline
-set modeline
-set modelines=5
+    " Enable modeline
+    set modeline
+    set modelines=5
 
-set ruler                       " show line and column information
-set laststatus=2
+    set ruler                       " show line and column information
+    set laststatus=2
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=0
-set expandtab
+    set tabstop=4
+    set shiftwidth=4
+    set softtabstop=0
+    set expandtab
 
-set ignorecase                  " caseinsensitive searches
-set showmode                    " always show command or insert mode
+    set ignorecase                  " caseinsensitive searches
+    set showmode                    " always show command or insert mode
 
-set nonu nornu                  " Don't show line numbers by default
+    set nonu nornu                  " Don't show line numbers by default
 
-set foldmethod=marker           " Enable folding by fold markers
-set foldclose=all               " Autoclose folds, when moving out of them
+    set foldmethod=marker           " Enable folding by fold markers
+    set foldclose=all               " Autoclose folds, when moving out of them
 
-set incsearch                   " Use incremental searching
-set hlsearch                    " Highlight search results
+    set incsearch                   " Use incremental searching
+    set hlsearch                    " Highlight search results
 
-" vimdiff specific
-if &diff
-    set diffopt+=iwhite
-    highlight! link DiffText Todo
-endif
+    " vimdiff specific
+    if &diff
+        set diffopt+=iwhite
+        highlight! link DiffText Todo
+    endif
 
-set fileformat=unix fileformats=unix,dos,mac
-set encoding=utf-8 fileencoding=utf-8 fileencodings=utf-8
+    set fileformat=unix fileformats=unix,dos,mac
+    set encoding=utf-8 fileencoding=utf-8 fileencodings=utf-8
 
-" Fix Mac backspace
-if has("unix")
-  let s:uname = system("uname -s")
-  if s:uname == "Darwin\n"
-    set backspace=2
-    :fixdel
-  endif
-endif
+    " Fix Mac backspace
+    if has("unix")
+      let s:uname = system("uname -s")
+      if s:uname == "Darwin\n"
+        set backspace=2
+        :fixdel
+      endif
+    endif
 
 " }}}
 
 " {{{ PLUGINS
 
-" {{{ Pathogen
-" https://github.com/tpope/vim-pathogen.git
+    " {{{ UltiSnips
+    " https://github.com/SirVer/ultisnips.git
 
-set sessionoptions-=options
+	let g:UltiSnipsEditSplit='vertical'
+    let g:UltiSnipsSnippetDirectories=['my-snippets', 'vim-snippets/UltiSnips']
+    let g:UltiSnipsListSnippets='<C-l>'
+	let g:UltiSnipsExpandTrigger='<C-c>'
+	let g:UltiSnipsJumpForwardTrigger='<C-j>'
+	let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 
-" }}}
+	inoremap <expr> <C-j> ((pumvisible())?('<C-n>'):('<C-j>'))
+	inoremap <expr> <C-k> ((pumvisible())?('<C-p>'):('<C-k>'))
 
-" {{{ EditorConfig
-" https://github.com/editorconfig/editorconfig-vim
+    " }}}
 
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+    " {{{ Pathogen
+    " https://github.com/tpope/vim-pathogen.git
 
-" }}}
+    set sessionoptions-=options
 
-" {{{ Indent Guides
-" https://github.com/nathanaelkane/vim-indent-guides
+    " }}}
 
-map <Leader>ig :IndentGuidesToggle<CR>
-let g:indent_guides_guide_size=1
-let g:indent_guides_start_level=2
+    " {{{ EditorConfig
+    " https://github.com/editorconfig/editorconfig-vim
 
-" }}}
+    let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
-" {{{ NERDTree
-" https://github.com/scrooloose/nerdtree
-"
-imap <Leader>sp :NERDTreeToggle<CR>
+    " }}}
 
-" }}}
+    " {{{ Indent Guides
+    " https://github.com/nathanaelkane/vim-indent-guides
 
-" {{{ Syntastic
-" https://github.com/scrooloose/syntastic
-"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+    map <Leader>ig :IndentGuidesToggle<CR>
+    let g:indent_guides_guide_size=1
+    let g:indent_guides_start_level=2
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+    " }}}
 
-" }}}
+    " {{{ NERDTree
+    " https://github.com/scrooloose/nerdtree
+    "
+    imap <Leader>sp :NERDTreeToggle<CR>
 
-" {{{ Terraform
-" https://github.com/hashivim/vim-terraform
-"
+    " }}}
 
-let g:terraform_align=1
+    " {{{ Syntastic
+    " https://github.com/scrooloose/syntastic
+    "
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_loc_list_height = 5
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+
+    " }}}
+
+    " {{{ Terraform
+    " https://github.com/hashivim/vim-terraform
+    "
+
+    let g:terraform_align=1
+
+    " }}}
 
 " }}}
 
