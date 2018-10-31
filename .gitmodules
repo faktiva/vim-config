@@ -48,6 +48,9 @@
 	path = bundle/cs-fixer-php
 	url = https://github.com/stephpy/vim-php-cs-fixer.git
 
+[submodule "Ansible Vim"]
+	path = bundle/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim
 [submodule "API Blueprint syntax"]
 	path = bundle/syntax-apiblueprint
 	url = https://github.com/kylef/apiblueprint.vim.git
