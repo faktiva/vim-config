@@ -52,6 +52,7 @@ The following plugins are installed and configured:
 
 ### Enhanced Syntax highlight
 
+- **[Ansible](https://github.com/pearofducks/ansible-vim.git) _(syntax for Ansible 2.x, it supports YAML playbooks, Jinja2 templates, and hosts files)_**
 - **[API Blueprint](https://github.com/kylef/apiblueprint.vim.git)**
 - **[CSS](https://github.com/JulesWang/css.vim)**
 - [Elixir](https://github.com/elixir-editors/vim-elixir)
