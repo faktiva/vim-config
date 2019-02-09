@@ -106,6 +106,13 @@ syntax enable
 
 " {{{ PLUGINS
 
+    " {{{ Pathogen
+    " https://github.com/tpope/vim-pathogen.git
+
+    set sessionoptions-=options
+
+    " }}}
+
     " {{{ UltiSnips
     " https://github.com/SirVer/ultisnips.git
 
@@ -118,13 +125,6 @@ syntax enable
 
 	inoremap <expr> <C-j> ((pumvisible())?('<C-n>'):('<C-j>'))
 	inoremap <expr> <C-k> ((pumvisible())?('<C-p>'):('<C-k>'))
-
-    " }}}
-
-    " {{{ Pathogen
-    " https://github.com/tpope/vim-pathogen.git
-
-    set sessionoptions-=options
 
     " }}}
 
@@ -171,6 +171,15 @@ syntax enable
     "
 
     let g:terraform_align=1
+
+    " }}}
+
+    " {{{ JSON syntax
+    " https://github.com/hashivim/vim-terraform
+    "
+
+    " Disable quote concealing (It's annoing to me)
+    let g:vim_json_syntax_conceal=0
 
     " }}}
 
