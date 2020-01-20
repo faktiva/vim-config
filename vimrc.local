@@ -86,7 +86,12 @@ syntax enable
 
     " vimdiff specific
     if &diff
-        set diffopt+=iwhite
+        if has("unix")
+            let s:uname = system("uname -s")
+            if s:uname != "Darwin\n"
+                set diffopt+=iwhite
+            endif
+        endif
         highlight! link DiffText Todo
     endif
 
@@ -95,11 +100,11 @@ syntax enable
 
     " Fix Mac backspace
     if has("unix")
-      let s:uname = system("uname -s")
-      if s:uname == "Darwin\n"
-        set backspace=2
-        :fixdel
-      endif
+        let s:uname = system("uname -s")
+        if s:uname == "Darwin\n"
+            set backspace=2
+            :fixdel
+        endif
     endif
 
 " }}}
