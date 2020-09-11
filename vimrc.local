@@ -1,13 +1,17 @@
 "
-" vim configuration by Emiliano 'AlberT' Gabrielli <emiliano.gabrielli@gmail.com>
+" vim configuration by Emiliano 'AlberT' Gabrielli <albert@faktiva.com>
 " feel free to use
-" Expecially intended for PHP and Symfony coding
 "
 
 set nocompatible
 
 " enable pathogen plugin manager
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+if ! has('python3')
+    let g:pathogen_blacklist = [ 'ultisnips' ]
+endif
+
 execute pathogen#infect()
 
 syntax enable
@@ -121,16 +125,17 @@ syntax enable
     " {{{ UltiSnips
     " https://github.com/SirVer/ultisnips.git
 
-	let g:UltiSnipsEditSplit='vertical'
-    let g:UltiSnipsSnippetDirectories=['my-snippets', 'vim-snippets/UltiSnips']
-    let g:UltiSnipsListSnippets='<C-l>'
-	let g:UltiSnipsExpandTrigger='<C-c>'
-	let g:UltiSnipsJumpForwardTrigger='<C-j>'
-	let g:UltiSnipsJumpBackwardTrigger='<C-k>'
+    if exists("b:did_autoload_ultisnips")
+        let g:UltiSnipsEditSplit='vertical'
+        let g:UltiSnipsSnippetDirectories=['my-snippets', 'vim-snippets/UltiSnips']
+        let g:UltiSnipsListSnippets='<C-l>'
+        let g:UltiSnipsExpandTrigger='<C-c>'
+        let g:UltiSnipsJumpForwardTrigger='<C-j>'
+        let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 
-	inoremap <expr> <C-j> ((pumvisible())?('<C-n>'):('<C-j>'))
-	inoremap <expr> <C-k> ((pumvisible())?('<C-p>'):('<C-k>'))
-
+        inoremap <expr> <C-j> ((pumvisible())?('<C-n>'):('<C-j>'))
+        inoremap <expr> <C-k> ((pumvisible())?('<C-p>'):('<C-k>'))
+    endif
     " }}}
 
     " {{{ EditorConfig
