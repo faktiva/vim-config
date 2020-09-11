@@ -10,7 +10,7 @@ An _**easy to deploy**_ set of pre-configured `VIM` plugins and configurations t
     git clone https://github.com/faktiva/vim-config.git ~/.vim && cd ~/.vim ; git submodule update --init
     ```
 
-- insert the following to `.vimrc`:
+- insert the following in your `.vimrc`:
 
     ```VimL
     " Source all settings
@@ -47,7 +47,7 @@ The following plugins are installed and configured:
 - **[PHP manual](https://github.com/alvan/vim-php-manual)**
 - **[Sparkup](https://github.com/rstacruz/sparkup) _(write HTML code faster)_**
 - **[Terraform](https://github.com/hashivim/vim-terraform) _(adds a `:Terraform` command that runs terraform, with tab completion of subcommands)_**
-- **[UltiSnips](https://github.com/SirVer/ultisnips)** _(the power of snippets in vim)_
+- **[UltiSnips](https://github.com/SirVer/ultisnips)** _(the power of snippets in vim; not loaded if py3 is not available)_
 - [Vim-Symfony](https://github.com/docteurklein/vim-symfony)
 - [Web Indent](https://github.com/vim-scripts/JavaScript-Indent) _(Javascript and HTML indenter)_
 
